@@ -10,6 +10,29 @@ int main() {
     // Sugestão: Posicione dois navios no tabuleiro, um verticalmente e outro horizontalmente.
     // Sugestão: Utilize `printf` para exibir as coordenadas de cada parte dos navios.
 
+    
+    int matriz[10][10] = {  //matriz com o tabuleiro e localização dos navios
+       {0,0,0,0,0,0,0,0,0,0}
+      ,{0,3,0,0,0,0,0,0,0,0}
+      ,{0,3,0,0,0,0,0,0,0,0}
+      ,{0,3,0,0,0,0,0,0,0,0}
+      ,{0,0,0,0,0,3,3,3,0,0}
+      ,{0,0,0,0,0,0,0,0,0,0}
+      ,{0,0,0,0,0,0,0,0,0,0}
+      ,{0,0,0,0,0,0,0,0,0,0}
+      ,{0,0,0,0,0,0,0,0,0,0}
+      ,{0,0,0,0,0,0,0,0,0,0}
+    }, i,j;
+
+    printf("\n###################Tabuleiro de batalha naval###################\n");
+    
+    for ( i = 0; i < 10; i++){ //laço externo para linhas
+      for ( j = 0; j < 10; j++){  // laço interno para colunas
+        printf("%d ",matriz[i][j]);
+      }
+      printf("\n");      
+    }
+
     // Nível Aventureiro - Expansão do Tabuleiro e Posicionamento Diagonal
     // Sugestão: Expanda o tabuleiro para uma matriz 10x10.
     // Sugestão: Posicione quatro navios no tabuleiro, incluindo dois na diagonal.
