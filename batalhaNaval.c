@@ -15,37 +15,6 @@ int main() {
     // Sugestão: Posicione quatro navios no tabuleiro, incluindo dois na diagonal.
     // Sugestão: Exiba o tabuleiro completo no console, mostrando 0 para posições vazias e 3 para posições ocupadas.
     
-    int matriz[10][10] = {  //matriz com o tabuleiro e localização dos navios
-       {0,0,0,0,3,0,0,0,0,0}
-      ,{0,3,0,0,0,3,0,0,0,0}
-      ,{0,3,0,0,0,0,3,0,0,0}
-      ,{0,3,0,0,0,0,0,0,0,0}
-      ,{0,0,0,0,0,3,3,3,0,0}
-      ,{0,0,0,0,0,0,0,0,0,0}
-      ,{0,0,0,0,3,0,0,0,0,0}
-      ,{0,0,0,3,0,0,0,0,0,0}
-      ,{0,0,3,0,0,0,0,0,0,0}
-      ,{0,3,0,0,0,0,0,0,0,0}
-    }, i,j;
-
-    printf("\n###################Tabuleiro de batalha naval###################\n");  // decoração para reprara o tabuleiro do indice superior, tornando o código mais limpot.
-    
-    for ( i = 0; i < 10; i++){ //laço externo para linhas
-      for ( j = 0; j < 10; j++){  // laço interno para colunas
-        printf("%d ",matriz[i][j]); // aqui ele vai imprimir a tabela com as matrizes.
-      }
-      printf("\n"); //aqui é incluso o \n para pular uma linha e ficar mais limpo.
-    }
-
-    printf("###############################################################\n"); 
-
-    if (i <= 10 && j <= 10){ // aqui ele verifica se a posição [0][0] é igual a 3, ou seja, se tem navio.
-      printf("Navios dentro da posição estipulada\n"); // aqui ele imprime que o navio foi encontrado na posição [0][0].
-    }
-     else 
-    {
-      printf("Navios fora da posição estipulada\n"); // aqui ele imprime que o navio não foi encontrado na posição [0][0].    
-    }
     
 
    
@@ -69,6 +38,39 @@ int main() {
     // 0 0 1 0 0
     // 1 1 1 1 1
     // 0 0 1 0 0
+
+    int matriz[10][10] = {  //matriz com o tabuleiro e localização dos navios
+      {0,0,0,0,3,0,0,0,0,0}
+     ,{0,0,0,3,3,3,0,0,0,0}
+     ,{0,0,0,0,3,0,3,0,0,0}
+     ,{0,0,0,0,0,3,3,3,0,0}
+     ,{0,0,0,0,3,3,3,3,3,0}
+     ,{0,0,0,0,0,0,0,0,0,0}
+     ,{0,0,0,0,0,0,0,0,0,0}
+     ,{0,0,0,0,3,0,0,0,0,0}
+     ,{0,0,3,3,3,3,3,0,0,0}
+     ,{0,0,0,0,3,0,0,0,0,0}
+   }, i,j;
+
+   printf("\n###################Tabuleiro de batalha naval###################\n");  // decoração para reprara o tabuleiro do indice superior, tornando o código mais limpot.
+   
+   for ( i = 0; i < 10; i++){ //laço externo para linhas
+     for ( j = 0; j < 10; j++){  // laço interno para colunas
+       printf("%d ",matriz[i][j]); // aqui ele vai imprimir a tabela com as matrizes.
+     }
+     printf("\n"); //aqui é incluso o \n para pular uma linha e ficar mais limpo.
+   }
+
+   printf("###############################################################\n"); 
+
+   if (i <= 10 && j <= 10){ // aqui ele verifica se a posição [0][0] é igual a 3, ou seja, se tem navio.
+     printf("Navios dentro da posição estipulada\n"); // aqui ele imprime que o navio foi encontrado na posição [0][0].
+   }
+    else 
+   {
+     printf("Navios fora da posição estipulada\n"); // aqui ele imprime que o navio não foi encontrado na posição [0][0].    
+   }
+   
 
     return 0;
 }
